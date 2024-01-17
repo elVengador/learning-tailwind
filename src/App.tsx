@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import { Link } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img
             src={reactLogo}
-            className="w-24 animate-spin-slow"
+            className="w-24 animate-spin duration-3s"
             alt="React logo"
           />
         </a>
@@ -29,6 +30,12 @@ function App() {
         >
           count is {count}
         </button>
+        <Link
+          to={"/home-page"}
+          className="bg-gray-200 p-2 mx-auto hover:bg-gray-300 active:bg-blue-300 rounded-md"
+        >
+          Jimy Nicanor Home Page
+        </Link>
         <p className="mx-auto">
           Edit <code className="font-bold">src/App.tsx</code> and save to test
           HMR
